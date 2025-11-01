@@ -1,34 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mooni — Artista</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://js.stripe.com/v3/"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amoon | Mooni</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="bg">
   <header class="topbar">
     <a class="back" href="index.html">← Indietro</a>
-    <div class="logo"><span class="crescent">◐</span> <span class="brand">Mooni</span></div>
+    <div class="logo"><span class="crescent">🌙</span> <span class="brand">Mooni</span></div>
   </header>
 
   <main class="container">
-    <div id="artist-profile" class="profile"></div>
-    <div id="tracks"></div>
+    <section id="artist-profile" class="profile">
+      <img src="assets/amoon.jpg" alt="Foto artista" class="artist-photo" />
+      <h1>Amoon</h1>
+      <p class="bio">
+        Producer barese, fondatore di Amoon Music Label. Attivo nei generi dance, pop ed EDM, con un sound ispirato alle vibrazioni anni ’90 e all’energia delle club track moderne.
+      </p>
+    </section>
+
+    <section id="tracks">
+      <h2>Brani</h2>
+
+      <div class="song-card">
+        <h3>Overthrown</h3>
+        <audio controls src="assets/overthrown.mp3"></audio>
+        <button class="donate-btn" onclick="donate('Overthrown')">Dona per questo brano</button>
+      </div>
+
+      <div class="song-card">
+        <h3>Moonlight Pulse</h3>
+        <audio controls src="assets/moonlight.mp3"></audio>
+        <button class="donate-btn" onclick="donate('Moonlight Pulse')">Dona per questo brano</button>
+      </div>
+
+      <div class="song-card">
+        <h3>Back to Sound</h3>
+        <audio controls src="assets/backtosound.mp3"></audio>
+        <button class="donate-btn" onclick="donate('Back to Sound')">Dona per questo brano</button>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
-    <small>Le donazioni sono gestite da Stripe. Gli importi molto piccoli possono subire commissioni elevate.</small>
+    <small>Le donazioni sono gestite tramite Stripe. Gli importi molto piccoli possono subire commissioni elevate.</small>
   </footer>
 
-  <script src="js/render.js"></script>
-  <script src="js/checkout.js"></script>
   <script>
-    window.addEventListener('DOMContentLoaded', () => renderArtistPage());
+    function donate(song) {
+      alert('Funzione donazione attiva per: ' + song);
+      // Qui collegheremo Stripe in seguito
+    }
   </script>
 </body>
 </html>
