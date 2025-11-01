@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mooni — Artista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body class="bg">
+  <header class="topbar">
+    <a class="back" href="index.html">← Indietro</a>
+    <div class="logo"><span class="crescent">◐</span> <span class="brand">Mooni</span></div>
+  </header>
+
+  <main class="container">
+    <div id="artist-profile" class="profile"></div>
+    <div id="tracks"></div>
+  </main>
+
+  <footer class="foot">
+    <small>Le donazioni sono gestite da Stripe. Gli importi molto piccoli possono subire commissioni elevate.</small>
+  </footer>
+
+  <script src="js/render.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => renderArtistPage());
+  </script>
+</body>
+</html>

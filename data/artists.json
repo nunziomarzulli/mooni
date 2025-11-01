@@ -1,0 +1,35 @@
+{
+  "artists": [
+    {
+      "id": "alessia-conti",
+      "name": "Alessia Conti",
+      "genre": "Elettronica",
+      "avatar": "assets/avatars/alessia.jpg",
+      "tracks": [
+        {
+          "id": "luce-nuova",
+          "title": "Luce Nuova",
+          "preview": "assets/previews/luce-nuova.mp3"
+        },
+        {
+          "id": "notte",
+          "title": "Notte",
+          "preview": "assets/previews/notte.mp3"
+        }
+      ]
+    },
+    {
+      "id": "fc-reale",
+      "name": "FcReale",
+      "genre": "Rapper",
+      "avatar": "assets/avatars/fcreale.jpg",
+      "tracks": [
+        {
+          "id": "strada",
+          "title": "Strada",
+          "preview": "assets/previews/strada.mp3"
+        }
+      ]
+    }
+  ]
+}

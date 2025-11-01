@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mooni — Artisti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="logo"><span class="crescent">◐</span> <span class="brand">Mooni</span></div>
+    <div class="tag">Ascolta, dona e brilla</div>
+  </header>
+
+  <main class="container">
+    <h1>Artisti</h1>
+    <div id="artist-list" class="grid"></div>
+  </main>
+
+  <footer class="foot">
+    <small>Starter kit statico · GitHub Pages + Stripe + (facoltativo) Firebase</small>
+  </footer>
+
+  <script src="js/render.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => renderArtistList());
+  </script>
+</body>
+</html>

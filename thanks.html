@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grazie — Mooni</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg">
+  <main class="container">
+    <h1>Grazie per il supporto!</h1>
+    <p>Se il download non parte in automatico, usa il bottone qui sotto.</p>
+    <div id="download"></div>
+    <p class="note">In produzione, questo link dovrebbe essere generato in modo temporaneo da un Webhook (ad es. Cloudflare Worker) dopo la conferma pagamento.</p>
+    <a class="btn ghost" href="index.html">Torna alla Home</a>
+  </main>
+  <script>
+    // Demo: prende query ?file=
+    const p = new URLSearchParams(location.search);
+    const file = p.get('file');
+    if (file) {
+      const a = document.createElement('a');
+      a.href = decodeURIComponent(file);
+      a.textContent = 'Scarica il brano';
+      a.className = 'btn';
+      document.getElementById('download').appendChild(a);
+    } else {
+      document.getElementById('download').textContent = 'Nessun file specificato.';
+    }
+  </script>
+</body>
+</html>
